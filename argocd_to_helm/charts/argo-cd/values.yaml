@@ -3280,3 +3280,18 @@ notifications:
     # For more information: https://argocd-notifications.readthedocs.io/en/stable/triggers/#default-triggers
     # defaultTriggers: |
     #   - on-sync-status-unknown
+
+argocd:
+
+  applications:
+  - name: argocd-user-app
+    source:
+      repoURL: https://github.com/Mehomalk/helm_argocd.git
+      path: argocd_to_helm/charts/argo-cd
+      targetRevision: HEAD
+    destination:
+      server: https://kubernetes.default.svc
+      namespace: myargo
+    project: default
+    syncPolicy:
+      automated: {}
