@@ -9,7 +9,7 @@ spec:
     name: kind
   project: default
   source:
-    path: helm-umbrella-chart
+    path: hello-world/helm-umbrella-chart
     repoURL: https://github.com/Mehomalk/helm_argocd/tree/main/hello-world
     targetRevision: HEAD
     helm:
